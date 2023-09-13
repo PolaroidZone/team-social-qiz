@@ -1,4 +1,8 @@
-const Options = () => {
+type OptionProps = {
+  topics: {};
+};
+
+const Options: React.FC<OptionProps> = ({ topics }) => {
   return (
     <div className="options">
       <div className="option">
