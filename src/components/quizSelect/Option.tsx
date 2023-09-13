@@ -1,14 +1,4 @@
-import { useState } from "react";
-import QuizData from "../../data/QuizData.json";
-
 const Options = () => {
-  const [topics, setTopics] = useState("");
-  const quizTopics = {...QuizData}
-
-  function handleClick() {
-    
-  }
-
   return (
     <div className="options">
       <div className="option">
