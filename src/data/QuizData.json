@@ -1,0 +1,44 @@
+[
+  {
+    "Category": "Movies",
+    "questions": [
+      {
+        "question": "What is Git?",
+        "answers": [
+          { "text": "A version control system", "correct": true },
+          { "text": "A programming language", "correct": false },
+          { "text": "A cloud storage service", "correct": false },
+          { "text": "An operating system", "correct": false }
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Programming",
+    "questions": [
+      {
+        "question": "What is Git?",
+        "answers": [
+          { "text": "A version control system", "correct": true },
+          { "text": "A programming language", "correct": false },
+          { "text": "A cloud storage service", "correct": false },
+          { "text": "An operating system", "correct": false }
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "History",
+    "questions": [
+      {
+        "question": "What is Git?",
+        "answers": [
+          { "text": "A version control system", "correct": true },
+          { "text": "A programming language", "correct": false },
+          { "text": "A cloud storage service", "correct": false },
+          { "text": "An operating system", "correct": false }
+        ]
+      }
+    ]
+  }
+]

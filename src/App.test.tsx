@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const registerTitle = screen.getByText(/Team social typescript/i);
+  const registerTitle = screen.getByText(/Team social!/i);
   expect(registerTitle).toBeInTheDocument();
 });
