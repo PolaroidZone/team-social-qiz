@@ -81,7 +81,7 @@ const RegisterForm: React.FC<FormProps> = ({ setPage }: FormProps) => {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">Enter</button>
     </form>
   );
 };
