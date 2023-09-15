@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Register from "./pages/Register";
 import QuizSelect from "./pages/QuizSelect";
+import Quiz from "./pages/Quiz";
 
 import Stage from "./constants/Appstage";
 
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState(Stage.register);
+  const [page, setPage] = useState(Stage.quiz);
 
   let Component = Register;
   switch (page) {
@@ -16,6 +17,9 @@ function App() {
       break;
     case "topic":
       Component = QuizSelect;
+      break;
+    case "quiz":
+      Component = Quiz;
       break;
     default:
   }

@@ -3,6 +3,8 @@ import Options from "../components/quizSelect/Option";
 import QuizData from "../data/QuizData.json";
 import { useState } from "react";
 
+import '../styles/QuizSelect.css'
+
 const QuizSelect = () => {
   const [topics, setTopics] = useState(QuizData);
 
