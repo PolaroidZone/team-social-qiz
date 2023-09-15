@@ -27,7 +27,7 @@ const QuizSelect = () => {
         </div>
       </div>
     ) : (
-      <Quiz selectedTopic={selectedTopic} quizData={newQuizData}/>
+      <Quiz setSelectedTopic={setSelectedTopic} quizData={newQuizData}/>
     )}
     </>
   );
