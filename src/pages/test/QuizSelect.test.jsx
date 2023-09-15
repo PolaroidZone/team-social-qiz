@@ -19,4 +19,4 @@ test("Renders Quiz topics", () => {
 
     const history = screen.queryByText(/history/i);
     expect(history).toBeInTheDocument();
-})
+})  

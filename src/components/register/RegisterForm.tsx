@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import User from "../../constants/User";
 
 type FormProps = {
   handlePageChange: () => void;

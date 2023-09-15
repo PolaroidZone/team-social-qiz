@@ -12,7 +12,7 @@ const QuizAside = ({score}: QuizAsideProps) => {
         <div className="user-progress">
           <div className="progress-container">
             <h1 className="progress-title">Progress:_</h1>
-            <h1 className="current-question">1</h1>
+            <h1 className="current-question">{score}</h1>
             <h1 className="total-questions">/10</h1>
           </div>
         </div>
