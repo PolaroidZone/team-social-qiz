@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Register from "./pages/Register";
+import QuizSelect from "./pages/QuizSelect";
+import Quiz from "./pages/Quiz";
+
+import Stage from "./constants/Appstage";
 
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("register");
-  const [user, setUser] = useState();
+  const [page, setPage] = useState(Stage.topic);
 
   let Component = Register;
   switch (page) {
     case "register":
       Component = Register;
       break;
-    case "quiz":
+    case "topic":
+      Component = QuizSelect;
       break;
     default:
   }
