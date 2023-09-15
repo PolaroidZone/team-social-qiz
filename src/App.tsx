@@ -8,7 +8,7 @@ import Stage from "./constants/Appstage";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState(Stage.quiz);
+  const [page, setPage] = useState(Stage.topic);
 
   let Component = Register;
   switch (page) {
@@ -17,9 +17,6 @@ function App() {
       break;
     case "topic":
       Component = QuizSelect;
-      break;
-    case "quiz":
-      Component = Quiz;
       break;
     default:
   }

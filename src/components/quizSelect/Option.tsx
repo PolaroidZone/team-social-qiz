@@ -1,30 +1,17 @@
+import { Key, SetStateAction } from "react";
+import OptionItem from "./OptionItem";
+
 type OptionProps = {
-  topics: {};
+  categories: String[];
+  handleOnselect: (category: SetStateAction<undefined>) => void;
 };
 
-const Options: React.FC<OptionProps> = ({ topics }) => {
+const Options: React.FC<OptionProps> = ({ categories, handleOnselect }) => {
   return (
     <div className="options">
-      <div className="option">
-        <div className="optionTile">
-          <h1>Movies</h1>
-        </div>
-        <div className="optionSelector">
-          <div>
-            <h1>Start</h1>
-          </div>
-        </div>
-      </div>
-      <div className="option">
-        <div className="optionTile">
-          <h1>Movies</h1>
-        </div>
-        <div className="optionSelector">
-          <div>
-            <h1>Start</h1>
-          </div>
-        </div>
-      </div>
+      {categories.map((category: any, index: Key | null | undefined) => (
+        <OptionItem key={index} category={category} handleOnselect={handleOnselect}/>
+      ))}
     </div>
   );
 };

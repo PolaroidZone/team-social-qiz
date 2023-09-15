@@ -1,6 +1,11 @@
 import "../styles/Quiz.css";
 
-const Quiz = () => {
+interface QuizProps {
+  selectedTopic: undefined;
+  quizData: {};
+}
+
+const Quiz = ({selectedTopic, quizData}: QuizProps) => {
   return (
     <div>
       <div className="paper-header">

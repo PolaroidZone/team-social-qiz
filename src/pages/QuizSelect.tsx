@@ -1,20 +1,35 @@
 import Header from "../components/quizSelect/SelectHeader";
 import Options from "../components/quizSelect/Option";
 import QuizData from "../data/QuizData.json";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
-import '../styles/QuizSelect.css'
+import "../styles/QuizSelect.css";
+import Quiz from "./Quiz";
 
 const QuizSelect = () => {
-  const [topics, setTopics] = useState(QuizData);
+  const [selectedTopic, setSelectedTopic] = useState();
+  const [quizPage, setQuizPage] = useState(false);
+
+  const newQuizData = [...QuizData];
+  const categories = newQuizData.map((quiz) => quiz.Category);
+
+  function HandleOnSelect(category: SetStateAction<undefined>) {
+    setSelectedTopic(category);
+  }
 
   return (
-    <div className="SelectContainer">
-      <div className="selector">
-        <Header />
-        <Options topics={topics}/>
+    <>
+    {!selectedTopic ? (
+      <div className="SelectContainer">
+        <div className="selector">
+          <Header />
+          <Options categories={categories} handleOnselect={HandleOnSelect} />
+        </div>
       </div>
-    </div>
+    ) : (
+      <Quiz selectedTopic={selectedTopic} quizData={newQuizData}/>
+    )}
+    </>
   );
 };
 

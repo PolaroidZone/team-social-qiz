@@ -3,12 +3,93 @@
     "Category": "Movies",
     "questions": [
       {
-        "question": "What is Git?",
+        "question": "Who plays the role of Iron Man in the MCU?",
         "answers": [
-          { "text": "A version control system", "correct": true },
-          { "text": "A programming language", "correct": false },
-          { "text": "A cloud storage service", "correct": false },
-          { "text": "An operating system", "correct": false }
+          { "text": "Robert Downey Jr.", "correct": true },
+          { "text": "Chris Hemsworth", "correct": false },
+          { "text": "Mark Ruffalo", "correct": false },
+          { "text": "Chris Evans", "correct": false }
+        ]
+      },
+      {
+        "question": "Which character is known as the God of Thunder?",
+        "answers": [
+          { "text": "Thor", "correct": true },
+          { "text": "Loki", "correct": false },
+          { "text": "Hawkeye", "correct": false },
+          { "text": "Black Widow", "correct": false }
+        ]
+      },
+      {
+        "question": "What is Captain America's shield made of?",
+        "answers": [
+          { "text": "Vibranium", "correct": true },
+          { "text": "Adamantium", "correct": false },
+          { "text": "Iron", "correct": false },
+          { "text": "Steel", "correct": false }
+        ]
+      },
+      {
+        "question": "Who is the primary antagonist in 'The Avengers' movie?",
+        "answers": [
+          { "text": "Loki", "correct": true },
+          { "text": "Thanos", "correct": false },
+          { "text": "Red Skull", "correct": false },
+          { "text": "Ultron", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the name of Tony Stark's AI assistant?",
+        "answers": [
+          { "text": "J.A.R.V.I.S.", "correct": true },
+          { "text": "H.E.R.B.I.E.", "correct": false },
+          { "text": "F.R.I.D.A.Y.", "correct": false },
+          { "text": "S.H.I.E.L.D.", "correct": false }
+        ]
+      },
+      {
+        "question": "Which movie features the character Black Panther's first appearance in the MCU?",
+        "answers": [
+          { "text": "Captain America: Civil War", "correct": true },
+          { "text": "Black Panther", "correct": false },
+          { "text": "Avengers: Age of Ultron", "correct": false },
+          { "text": "Thor: Ragnarok", "correct": false }
+        ]
+      },
+      {
+        "question": "Who is the leader of the Guardians of the Galaxy?",
+        "answers": [
+          { "text": "Star-Lord (Peter Quill)", "correct": true },
+          { "text": "Rocket Raccoon", "correct": false },
+          { "text": "Gamora", "correct": false },
+          { "text": "Drax the Destroyer", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the name of the mystical artifact that Doctor Strange wields?",
+        "answers": [
+          { "text": "Eye of Agamotto", "correct": true },
+          { "text": "Sorcerer's Stone", "correct": false },
+          { "text": "Wand of Watoomb", "correct": false },
+          { "text": "Crimson Bands of Cyttorak", "correct": false }
+        ]
+      },
+      {
+        "question": "Which character is the Norse God of Mischief?",
+        "answers": [
+          { "text": "Loki", "correct": true },
+          { "text": "Thor", "correct": false },
+          { "text": "Odin", "correct": false },
+          { "text": "Hela", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the name of the artificial intelligence that oversees the Avengers' operations?",
+        "answers": [
+          { "text": "Friday", "correct": true },
+          { "text": "Jarvis", "correct": false },
+          { "text": "Ultron", "correct": false },
+          { "text": "Vision", "correct": false }
         ]
       }
     ]
@@ -24,6 +105,87 @@
           { "text": "A cloud storage service", "correct": false },
           { "text": "An operating system", "correct": false }
         ]
+      },
+      {
+        "question": "Which programming language is known for its use in web development and is often used alongside HTML and CSS?",
+        "answers": [
+          { "text": "Python", "correct": false },
+          { "text": "Java", "correct": false },
+          { "text": "JavaScript", "correct": true },
+          { "text": "C++", "correct": false }
+        ]
+      },
+      {
+        "question": "What does the acronym 'HTML' stand for?",
+        "answers": [
+          { "text": "Hypertext Markup Language", "correct": true },
+          { "text": "Hyper Transfer Markup Language", "correct": false },
+          { "text": "High-Level Text Markup Language", "correct": false },
+          { "text": "Home Tool Markup Language", "correct": false }
+        ]
+      },
+      {
+        "question": "In programming, what is the purpose of a 'for' loop?",
+        "answers": [
+          { "text": "To define a function", "correct": false },
+          { "text": "To declare a variable", "correct": false },
+          { "text": "To iterate over a sequence of values", "correct": true },
+          { "text": "To perform a mathematical operation", "correct": false }
+        ]
+      },
+      {
+        "question": "Which data structure follows the 'last in, first out' (LIFO) principle?",
+        "answers": [
+          { "text": "Queue", "correct": false },
+          { "text": "Stack", "correct": true },
+          { "text": "Linked List", "correct": false },
+          { "text": "Array", "correct": false }
+        ]
+      },
+      {
+        "question": "What does CSS stand for in web development?",
+        "answers": [
+          { "text": "Cascading Style Sheets", "correct": true },
+          { "text": "Computer Science Script", "correct": false },
+          { "text": "Client-Side Scripting", "correct": false },
+          { "text": "Content Sharing System", "correct": false }
+        ]
+      },
+      {
+        "question": "Which programming language is often used for data analysis and scientific computing?",
+        "answers": [
+          { "text": "Java", "correct": false },
+          { "text": "Python", "correct": true },
+          { "text": "C#", "correct": false },
+          { "text": "Ruby", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the purpose of a 'while' loop in programming?",
+        "answers": [
+          { "text": "To define a constant", "correct": false },
+          { "text": "To create a function", "correct": false },
+          { "text": "To repeatedly execute a block of code while a condition is true", "correct": true },
+          { "text": "To declare a variable", "correct": false }
+        ]
+      },
+      {
+        "question": "Which programming paradigm emphasizes the use of functions and immutability?",
+        "answers": [
+          { "text": "Procedural programming", "correct": false },
+          { "text": "Object-oriented programming", "correct": false },
+          { "text": "Functional programming", "correct": true },
+          { "text": "Structured programming", "correct": false }
+        ]
+      },
+      {
+        "question": "What is the primary purpose of a 'try...catch' block in JavaScript?",
+        "answers": [
+          { "text": "To define a new function", "correct": false },
+          { "text": "To declare a variable", "correct": false },
+          { "text": "To handle exceptions and errors gracefully", "correct": true },
+          { "text": "To create a loop", "correct": false }
+        ]
       }
     ]
   },
@@ -31,12 +193,93 @@
     "Category": "History",
     "questions": [
       {
-        "question": "What is Git?",
+        "question": "Who was the first President of the United States?",
         "answers": [
-          { "text": "A version control system", "correct": true },
-          { "text": "A programming language", "correct": false },
-          { "text": "A cloud storage service", "correct": false },
-          { "text": "An operating system", "correct": false }
+          { "text": "John Adams", "correct": false },
+          { "text": "Thomas Jefferson", "correct": false },
+          { "text": "George Washington", "correct": true },
+          { "text": "Abraham Lincoln", "correct": false }
+        ]
+      },
+      {
+        "question": "Which war was fought between the North and the South of the United States from 1861 to 1865?",
+        "answers": [
+          { "text": "World War I", "correct": false },
+          { "text": "Civil War", "correct": true },
+          { "text": "American Revolution", "correct": false },
+          { "text": "World War II", "correct": false }
+        ]
+      },
+      {
+        "question": "Who is known for discovering the theory of relativity and the equation E=mc²?",
+        "answers": [
+          { "text": "Isaac Newton", "correct": false },
+          { "text": "Albert Einstein", "correct": true },
+          { "text": "Galileo Galilei", "correct": false },
+          { "text": "Marie Curie", "correct": false }
+        ]
+      },
+      {
+        "question": "In which year did Christopher Columbus first voyage to the Americas?",
+        "answers": [
+          { "text": "1492", "correct": true },
+          { "text": "1620", "correct": false },
+          { "text": "1776", "correct": false },
+          { "text": "1812", "correct": false }
+        ]
+      },
+      {
+        "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+        "answers": [
+          { "text": "Joseph Stalin", "correct": false },
+          { "text": "Vladimir Putin", "correct": false },
+          { "text": "Leon Trotsky", "correct": false },
+          { "text": "Nikita Khrushchev", "correct": true }
+        ]
+      },
+      {
+        "question": "Which ancient civilization built the Great Pyramid of Giza?",
+        "answers": [
+          { "text": "Roman Empire", "correct": false },
+          { "text": "Maya Civilization", "correct": false },
+          { "text": "Ancient Egypt", "correct": true },
+          { "text": "Inca Empire", "correct": false }
+        ]
+      },
+      {
+        "question": "Who wrote the 'I Have a Dream' speech delivered during the March on Washington for Jobs and Freedom in 1963?",
+        "answers": [
+          { "text": "Malcolm X", "correct": false },
+          { "text": "Martin Luther King Jr.", "correct": true },
+          { "text": "Rosa Parks", "correct": false },
+          { "text": "Nelson Mandela", "correct": false }
+        ]
+      },
+      {
+        "question": "Which European city is known as the 'City of Love' and is famous for its romantic ambiance?",
+        "answers": [
+          { "text": "Paris", "correct": true },
+          { "text": "Venice", "correct": false },
+          { "text": "Prague", "correct": false },
+          { "text": "Rome", "correct": false }
+        ]
+      },
+      {
+        "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+        "answers": [
+          { "text": "Amelia Earhart", "correct": true },
+          { "text": "Bessie Coleman", "correct": false },
+          { "text": "Sally Ride", "correct": false },
+          { "text": "Valentina Tereshkova", "correct": false }
+        ]
+      },
+      {
+        "question": "What event marked the beginning of World War I in 1914?",
+        "answers": [
+          { "text": "The assassination of Archduke Franz Ferdinand", "correct": true },
+          { "text": "The signing of the Treaty of Versailles", "correct": false },
+          { "text": "The sinking of the Lusitania", "correct": false },
+          { "text": "The Battle of the Somme", "correct": false }
         ]
       }
     ]
