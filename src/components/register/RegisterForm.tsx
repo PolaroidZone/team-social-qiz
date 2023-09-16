@@ -4,6 +4,7 @@ type FormProps = {
   handlePageChange: () => void;
 };
 
+//interface for event object
 interface e {
   preventDefault(): unknown;
   target: {
@@ -17,12 +18,13 @@ const RegisterForm: React.FC<FormProps> = ({ handlePageChange }) => {
     name: "",
   });
 
+  //e is the event object
   const handleInputChange = (e: e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-
+  //e is the event object
   function handleSubMit(e: { preventDefault: () => void }) {
     e.preventDefault();
     console.log(formData);
