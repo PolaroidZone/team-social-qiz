@@ -29,6 +29,8 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
         answers: question.answers, // Assuming 'answers' is an array of answer objects
       })) || [];
 
+  const totalQuestions = filterQuestions.length;
+
   return (
     <>
       {/* header */}
@@ -37,7 +39,7 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
         <div className="quiz-paper">
           <div className="paper">
             {/* aside */}
-            <QuizAside score={score} />
+            <QuizAside currentQuestion={currentQuestion} totalQuestion={totalQuestions} />
             {/* quiz */}
             <QuizDoc
               score={score}
