@@ -4,8 +4,9 @@ interface QuizDocProps {
     answers: answer[];
   }[];
   currentQuestion: number;
-  handleAnswerClick: (selectedAnswer: string, isCorrect: boolean) => void;
   score: number;
+  setScore: React.Dispatch<React.SetStateAction<number>>;
+  setCurrentQuestion: React.Dispatch<React.SetStateAction<number>>;
 }
 
 type answer = {
@@ -15,11 +16,28 @@ type answer = {
 
 const QuizDoc = ({
   score,
+  setScore,
+  setCurrentQuestion,
   filterQuestions,
   currentQuestion,
-  handleAnswerClick,
 }: QuizDocProps) => {
   const question = filterQuestions[currentQuestion];
+
+  const handleAnswerClick = (_selectedAnswer: string, isCorrect: boolean) => {
+    // Move to the next question
+    if (currentQuestion < filterQuestions.length ) {
+      if (isCorrect) {
+        // Increment the score if the selected answer is correct
+        setScore(score + 1);
+
+        setCurrentQuestion(currentQuestion + 1);
+      }
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      // Display feedback when all questions have been answered
+      alert(`Quiz Completed. Your Score: ${score + 1}`);
+    }
+  };
 
   if (!question) {
     // Display feedback when all questions have been answered

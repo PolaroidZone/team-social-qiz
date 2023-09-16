@@ -21,20 +21,6 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  const handleAnswerClick = (selectedAnswer: string, isCorrect: boolean) => {
-    if (isCorrect) {
-      // Increment the score if the selected answer is correct
-      setScore(score + 1);
-    }
-    // Move to the next question
-    if (currentQuestion < filterQuestions.length -1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      // Display feedback when all questions have been answered
-      alert(`Quiz Completed. Your Score: ${score + 1}`);
-    }
-  };
-
   const filterQuestions =
     quizData
       .find((quiz) => quiz.Category === selectedTopic)
@@ -56,8 +42,9 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
             <QuizDoc
               score={score}
               filterQuestions={filterQuestions}
-              handleAnswerClick={handleAnswerClick}
-              currentQuestion={0}
+              currentQuestion={currentQuestion}
+              setScore={setScore}
+              setCurrentQuestion={setCurrentQuestion}
             />
           </div>
         </div>
