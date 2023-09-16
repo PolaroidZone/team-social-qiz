@@ -18,7 +18,9 @@ interface QuizProps {
 }
 
 const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
+  // "0" is the default value for the score
   const [score, setScore] = useState(0);
+  // "0" is the default value for the current question based on the arry index
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const filterQuestions =

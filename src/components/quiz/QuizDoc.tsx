@@ -29,7 +29,7 @@ const QuizDoc = ({
       if (isCorrect) {
         // Increment the score if the selected answer is correct
         setScore(score + 1);
-
+        //Increment the current question number
         setCurrentQuestion(currentQuestion + 1);
       }
       setCurrentQuestion(currentQuestion + 1);

@@ -8,7 +8,6 @@ import Quiz from "./Quiz";
 
 const QuizSelect = () => {
   const [selectedTopic, setSelectedTopic] = useState();
-  const [quizPage, setQuizPage] = useState(false);
 
   const newQuizData = [...QuizData];
   const categories = newQuizData.map((quiz) => quiz.Category);
