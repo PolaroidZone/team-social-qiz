@@ -1,3 +1,5 @@
+import MemeBlock from "./MemeBlock";
+
 interface QuizDocProps {
   filterQuestions: {
     question: string;
@@ -42,10 +44,7 @@ const QuizDoc = ({
   if (!question) {
     // Display feedback when all questions have been answered
     return (
-      <div className="quiz">
-        <h1>Quiz Completed</h1>
-        <p>Your Score: {score}</p>
-      </div>
+      <MemeBlock score={score} />
     );
   }
 
