@@ -11,11 +11,11 @@ const OptionItem = ({ category, handleOnselect }: OptionItemProps) => {
       <div className="optionTile">
         <h1>{category}</h1>
       </div>
-      <div className="optionSelector" onClick={() => handleOnselect(category)}>
+      <button data-testid={category} className="optionSelector" onClick={() => handleOnselect(category)}>
         <div>
           <h1>Start</h1>
         </div>
-      </div>
+      </button>
     </div>
   );
 };
