@@ -18,6 +18,10 @@ const RegisterForm: React.FC<FormProps> = ({ handlePageChange }) => {
     name: "",
   });
 
+  if (localStorage.getItem("user")) {
+    handlePageChange();
+  }
+
   //e is the event object
   const handleInputChange = (e: e) => {
     const { name, value } = e.target;
@@ -29,9 +33,15 @@ const RegisterForm: React.FC<FormProps> = ({ handlePageChange }) => {
     e.preventDefault();
     console.log(formData);
 
-    localStorage.setItem('user', JSON.stringify(formData.name));
+    localStorage.setItem("user", JSON.stringify(formData.name));
 
-    handlePageChange()
+    //Check if name is empty space
+    if (formData.name.trim() === "") {
+      alert("Please enter a username");
+      return;
+    }
+
+    handlePageChange();
   }
 
   return (
