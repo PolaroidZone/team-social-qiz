@@ -12,6 +12,8 @@ interface MemeBlockProps {
 
 const MemeBlock = ({ score }: MemeBlockProps) => {
   const [memes, setMemes] = useState<Meme[]>([]);
+  const [currentMeme, setCurrentMeme] = useState<string>("");
+  const [grade, setGrade] = useState<string>("");
 
   useEffect(() => {
     axios
@@ -25,18 +27,32 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
       });
   }, []);
 
+  useEffect(() => {
+    // Determine the grade based on the score
+    if (score <= 3) {
+      setGrade("bad");
+    } else if (score <= 6) {
+      setGrade("good");
+    } else {
+      setGrade("amazing"); // Corrected the spelling of "amazing"
+    }
+
+    // Generate a random meme for the current grade
+    const imageUrls = memes
+      .filter((meme) => meme.category === grade)
+      .map((meme) => meme.imageUrl);
+
+    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+
+    setCurrentMeme(imageUrls[randomIndex]);
+  }, [score, memes, grade]);
+
   return (
     <div className="quiz">
       <h1>Quiz Completed</h1>
       <p>Your Score: {score}</p>
-      <ul>
-        {memes.map((meme: Meme, index: number) => (
-          <li key={index}>
-            <h2>{meme.category}</h2>
-            <img src={meme.imageUrl} alt={meme.category} />
-          </li>
-        ))}
-      </ul>
+      <p>Grade: {grade}</p>
+      <img src={currentMeme} alt="meme" />
     </div>
   );
 };
