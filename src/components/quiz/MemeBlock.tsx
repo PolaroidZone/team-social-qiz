@@ -42,9 +42,9 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
       .filter((meme) => meme.category === grade)
       .map((meme) => meme.imageUrl);
 
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const index = Math.floor(Math.random() * imageUrls.length);
 
-    setCurrentMeme(imageUrls[randomIndex]);
+    setCurrentMeme(imageUrls[index]);
   }, [score, memes, grade]);
 
   return (
@@ -52,7 +52,9 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
       <h1>Quiz Completed</h1>
       <p>Your Score: {score}</p>
       <p>Grade: {grade}</p>
-      <img src={currentMeme} alt="meme" />
+      <div className="meme-container">
+        <img className="meme" src={currentMeme} alt="meme" />
+      </div>
     </div>
   );
 };
