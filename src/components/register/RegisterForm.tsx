@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import User from "../../constants/User";
 
 type FormProps = {
   handlePageChange: () => void;
 };
 
+//interface for event object
 interface e {
   preventDefault(): unknown;
   target: {
@@ -18,19 +18,30 @@ const RegisterForm: React.FC<FormProps> = ({ handlePageChange }) => {
     name: "",
   });
 
+  if (localStorage.getItem("user")) {
+    handlePageChange();
+  }
+
+  //e is the event object
   const handleInputChange = (e: e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-
+  //e is the event object
   function handleSubMit(e: { preventDefault: () => void }) {
     e.preventDefault();
     console.log(formData);
 
-    localStorage.setItem('user', JSON.stringify(formData.name));
+    localStorage.setItem("user", JSON.stringify(formData.name));
 
-    handlePageChange()
+    //Check if name is empty space
+    if (formData.name.trim() === "") {
+      alert("Please enter a username");
+      return;
+    }
+
+    handlePageChange();
   }
 
   return (

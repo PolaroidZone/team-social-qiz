@@ -8,7 +8,6 @@ import Quiz from "./Quiz";
 
 const QuizSelect = () => {
   const [selectedTopic, setSelectedTopic] = useState();
-  const [quizPage, setQuizPage] = useState(false);
 
   const newQuizData = [...QuizData];
   const categories = newQuizData.map((quiz) => quiz.Category);
@@ -19,16 +18,20 @@ const QuizSelect = () => {
 
   return (
     <>
-    {!selectedTopic ? (
-      <div className="SelectContainer">
-        <div className="selector">
-          <Header />
-          <Options categories={categories} handleOnselect={HandleOnSelect} />
+      {!selectedTopic ? (
+        <div className="SelectContainer">
+          <div className="selector">
+            <Header />
+            <Options categories={categories} handleOnselect={HandleOnSelect} />
+          </div>
         </div>
-      </div>
-    ) : (
-      <Quiz setSelectedTopic={setSelectedTopic} quizData={newQuizData}/>
-    )}
+      ) : (
+        <Quiz
+          setSelectedTopic={setSelectedTopic}
+          selectedTopic={selectedTopic}
+          quizData={newQuizData}
+        />
+      )}
     </>
   );
 };

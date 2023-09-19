@@ -1,13 +1,15 @@
-import { SetStateAction } from "react";
+import { SetStateAction, useState } from "react";
 
 interface QuizNavProps {
   setSelectedTopic: React.Dispatch<SetStateAction<undefined>>;
 }
 
 const QuizNav = ({ setSelectedTopic }: QuizNavProps) => {
+  
   function handleBackClick() {
     setSelectedTopic(undefined);
   }
+
   return (
     <div className="paper-header">
       <div className="quiz-title">
