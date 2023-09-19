@@ -18,16 +18,20 @@ const QuizSelect = () => {
 
   return (
     <>
-    {!selectedTopic ? (
-      <div className="SelectContainer">
-        <div className="selector">
-          <Header />
-          <Options categories={categories} handleOnselect={HandleOnSelect} />
+      {!selectedTopic ? (
+        <div className="SelectContainer">
+          <div className="selector">
+            <Header />
+            <Options categories={categories} handleOnselect={HandleOnSelect} />
+          </div>
         </div>
-      </div>
-    ) : (
-      <Quiz setSelectedTopic={setSelectedTopic} selectedTopic={selectedTopic} quizData={newQuizData}/>
-    )}
+      ) : (
+        <Quiz
+          setSelectedTopic={setSelectedTopic}
+          selectedTopic={selectedTopic}
+          quizData={newQuizData}
+        />
+      )}
     </>
   );
 };

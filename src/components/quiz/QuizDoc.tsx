@@ -44,7 +44,7 @@ const QuizDoc = ({
   if (!question) {
     // Display feedback when all questions have been answered
     return (
-      <MemeBlock score={score} />
+      <MemeBlock score={score}/>
     );
   }
 

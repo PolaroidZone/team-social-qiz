@@ -41,7 +41,10 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
         <div className="quiz-paper">
           <div className="paper">
             {/* aside */}
-            <QuizAside currentQuestion={currentQuestion} totalQuestion={totalQuestions} />
+            <QuizAside
+              currentQuestion={currentQuestion}
+              totalQuestion={totalQuestions}
+            />
             {/* quiz */}
             <QuizDoc
               score={score}

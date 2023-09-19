@@ -113,3 +113,18 @@
     background-color: rgb(218, 218, 218);
     transition: .5s;
 }
+
+.meme-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 600px;
+    overflow: scroll;
+}
+
+.meme {
+    width: 400;
+    height: 400;
+    object-fit: cover;
+}
