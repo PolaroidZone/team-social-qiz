@@ -9,6 +9,7 @@ interface QuizDocProps {
   score: number;
   setScore: React.Dispatch<React.SetStateAction<number>>;
   setCurrentQuestion: React.Dispatch<React.SetStateAction<number>>;
+  quizCount: number;
 }
 
 type answer = {
@@ -22,12 +23,13 @@ const QuizDoc = ({
   setCurrentQuestion,
   filterQuestions,
   currentQuestion,
+  quizCount,
 }: QuizDocProps) => {
   const question = filterQuestions[currentQuestion];
 
   const handleAnswerClick = (_selectedAnswer: string, isCorrect: boolean) => {
     // Move to the next question
-    if (currentQuestion < filterQuestions.length ) {
+    if (currentQuestion < quizCount ) {
       if (isCorrect) {
         // Increment the score if the selected answer is correct
         setScore(score + 1);
@@ -41,10 +43,10 @@ const QuizDoc = ({
     }
   };
 
-  if (!question) {
+  if (currentQuestion === quizCount) {
     // Display feedback when all questions have been answered
     return (
-      <MemeBlock score={score}/>
+      <MemeBlock score={score} quizCount={quizCount}/>
     );
   }
 

@@ -1,13 +1,17 @@
+import { SetStateAction, useState } from "react";
+
 import Header from "../components/quizSelect/SelectHeader";
 import Options from "../components/quizSelect/Option";
 import QuizData from "../data/QuizData.json";
-import { SetStateAction, useState } from "react";
+import QuestionCountFilter from "../components/quizSelect/QuestionCountFilter";
+import Quiz from "./Quiz";
 
 import "../styles/QuizSelect.css";
-import Quiz from "./Quiz";
 
 const QuizSelect = () => {
   const [selectedTopic, setSelectedTopic] = useState();
+  //state to controll the number of questions per quiz
+  const [quizCount, setQuizCount] = useState(5);
 
   const newQuizData = [...QuizData];
   const categories = newQuizData.map((quiz) => quiz.Category);
@@ -22,11 +26,16 @@ const QuizSelect = () => {
         <div className="SelectContainer">
           <div className="selector">
             <Header />
+            <QuestionCountFilter
+              quizCount={quizCount}
+              setQuizCount={setQuizCount}
+            />
             <Options categories={categories} handleOnselect={HandleOnSelect} />
           </div>
         </div>
       ) : (
         <Quiz
+          quizCount={quizCount}
           setSelectedTopic={setSelectedTopic}
           selectedTopic={selectedTopic}
           quizData={newQuizData}
