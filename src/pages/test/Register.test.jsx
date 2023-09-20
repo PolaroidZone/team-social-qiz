@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Register from "../Register";
-import userEvent from "@testing-library/user-event";
+import Register from "../Register";;
 
 test("Are the form input renderd", () => {
   render(<Register/>);

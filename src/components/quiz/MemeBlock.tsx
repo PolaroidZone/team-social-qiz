@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface Meme {
   category: string;
@@ -34,7 +34,7 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
     } else if (score <= 6) {
       setGrade("good");
     } else {
-      setGrade("amazing"); // Corrected the spelling of "amazing"
+      setGrade("amazing");
     }
 
     // Generate a random meme for the current grade
