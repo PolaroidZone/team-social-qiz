@@ -35,8 +35,26 @@ const Quiz = ({
       .find((quiz) => quiz.Category === selectedTopic)
       ?.questions.map((question) => ({
         question: question.question,
-        answers: question.answers, // Assuming 'answers' is an array of answer objects
+        answers: question.answers,
       })) || [];
+
+  const shuffleQuestions = (questions: any[]) => {
+    // i is the last index of the array
+    let i = questions.length - 1;
+    for (; i > 0; i--) {
+      //j is a random number between 0 and i
+      const j = Math.floor(Math.random() * (i + 1));
+      //temp is a temporary variable to store the value of questions[i]
+      const temp = questions[i];
+
+      //swap questions[i] with questions[j]
+      questions[i] = questions[j];
+
+      //swap questions[j] with temp
+      questions[j] = temp;
+    }
+    return questions;
+  };
 
   return (
     <>
@@ -53,7 +71,7 @@ const Quiz = ({
             {/* quiz */}
             <QuizDoc
               score={score}
-              filterQuestions={filterQuestions}
+              filterQuestions={shuffleQuestions(filterQuestions)}
               currentQuestion={currentQuestion}
               setScore={setScore}
               setCurrentQuestion={setCurrentQuestion}
