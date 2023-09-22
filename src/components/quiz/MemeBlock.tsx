@@ -32,7 +32,6 @@ const MemeBlock = ({ score, quizCount }: MemeBlockProps) => {
   }, []);
 
   useEffect(() => {
-    // Determine the grade based on the score
     if (score <= badGrade) {
       setGrade("bad");
     } else if (score <= goodGrade) {
@@ -49,7 +48,7 @@ const MemeBlock = ({ score, quizCount }: MemeBlockProps) => {
     const index = Math.floor(Math.random() * imageUrls.length);
 
     setCurrentMeme(imageUrls[index]);
-  }, [score, memes, grade]);
+  }, [score, memes, grade, badGrade, goodGrade]);
 
   return (
     <div className="quiz">
