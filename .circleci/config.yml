@@ -18,6 +18,9 @@ jobs:
           name: Build Project Artifacts
           command: sudo vercel build --token=$VERCEL_TOKEN
       - run:
+          name: Running tests
+          command: sudo npm run test
+      - run:
           name: Deploy Project Artifacts to Vercel
           command: sudo vercel deploy --prebuilt --token=$VERCEL_TOKEN
 
@@ -38,6 +41,9 @@ jobs:
       - run:
           name: Build Project Artifacts
           command: sudo vercel build --prod --token=$VERCEL_TOKEN
+      - run:
+          name: Running tests
+          command: sudo npm run test
       - run:
           name: Deploy Project Artifacts to Vercel
           command: sudo vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
