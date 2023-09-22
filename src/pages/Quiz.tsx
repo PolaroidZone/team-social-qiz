@@ -35,17 +35,14 @@ const Quiz = ({ setSelectedTopic, selectedTopic, quizData }: QuizProps) => {
 
   return (
     <>
-      {/* header */}
       <QuizNav setSelectedTopic={setSelectedTopic} />
       <div className="quiz-container">
         <div className="quiz-paper">
           <div className="paper">
-            {/* aside */}
             <QuizAside
               currentQuestion={currentQuestion}
               totalQuestion={totalQuestions}
             />
-            {/* quiz */}
             <QuizDoc
               score={score}
               filterQuestions={filterQuestions}

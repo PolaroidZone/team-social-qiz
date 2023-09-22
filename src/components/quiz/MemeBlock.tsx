@@ -28,13 +28,12 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
   }, []);
 
   useEffect(() => {
-    // Determine the grade based on the score
     if (score <= 3) {
       setGrade("bad");
     } else if (score <= 6) {
       setGrade("good");
     } else {
-      setGrade("amazing"); // Corrected the spelling of "amazing"
+      setGrade("amazing");
     }
 
     // Generate a random meme for the current grade
