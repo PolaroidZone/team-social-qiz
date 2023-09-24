@@ -45,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-} 
+}
 
 .optionTile {
   margin-left: 10px;
@@ -79,5 +79,40 @@
 
 .optionSelector:hover {
   background-color: rgb(83, 83, 83);
-  transition: .5s;
+  transition: 0.5s;
+}
+
+.countFilter {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.fiter-title {
+  display: flex;
+  align-items: center;
+}
+
+.fiter-title h1{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.count-option-selector {
+  display: flex;
+  justify-content: end;
+  width: 200px;
+}
+.count-option-toggler {
+  width: 100px;
+}
+
+.count-option-toggler h1 {
+  font-size: 17px;
+  font-weight: 400;
 }

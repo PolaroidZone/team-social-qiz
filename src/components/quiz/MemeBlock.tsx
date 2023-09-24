@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface Meme {
   category: string;
@@ -8,12 +8,16 @@ interface Meme {
 
 interface MemeBlockProps {
   score: number;
+  quizCount: number;
 }
 
-const MemeBlock = ({ score }: MemeBlockProps) => {
+const MemeBlock = ({ score, quizCount }: MemeBlockProps) => {
   const [memes, setMemes] = useState<Meme[]>([]);
   const [currentMeme, setCurrentMeme] = useState<string>("");
   const [grade, setGrade] = useState<string>("");
+
+  const badGrade = (quizCount / 2) - 0.5;
+  const goodGrade = (quizCount / 2) + 1.5;
 
   useEffect(() => {
     axios
@@ -28,13 +32,12 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
   }, []);
 
   useEffect(() => {
-    // Determine the grade based on the score
-    if (score <= 3) {
+    if (score <= badGrade) {
       setGrade("bad");
-    } else if (score <= 6) {
+    } else if (score <= goodGrade) {
       setGrade("good");
     } else {
-      setGrade("amazing"); // Corrected the spelling of "amazing"
+      setGrade("amazing");
     }
 
     // Generate a random meme for the current grade
@@ -45,7 +48,7 @@ const MemeBlock = ({ score }: MemeBlockProps) => {
     const index = Math.floor(Math.random() * imageUrls.length);
 
     setCurrentMeme(imageUrls[index]);
-  }, [score, memes, grade]);
+  }, [score, memes, grade, badGrade, goodGrade]);
 
   return (
     <div className="quiz">
